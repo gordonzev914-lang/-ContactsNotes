@@ -1,9 +1,9 @@
 
 import fs from "fs/promises"
-export const writeJsonFile=(object,type)=>{
+export const writeJsonFile=(object,path)=>{
     try{
         const arryToString=JSON.stringify(object)
-        fs.writeFile(`./data/${type}.json`,arryToString ,'utf-8',(arryToString)=>{console.log(arryToString)})
+        fs.writeFile(`${path}.json`,arryToString ,'utf-8',(arryToString)=>{console.log(arryToString)})
         console.log("succeeded")
         return arryToString
     }
